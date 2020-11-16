@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@300&display=swap');
+
+
+// -------------------- Nav --------------------
+
+.NavbarItems {
+  max-width: 1024px;
+  margin: 20px auto 0px auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  .navbar-logo {
+    font-family: 'Piazzolla', serif;
+    letter-spacing: 2px;
+    margin-left: 15px;
+    align-self: flex-start;
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+  .navbar-menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 60%;
+    margin-right: -60%;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    transition: 0.3s;
+    .mobile-menu {
+      margin-top: 12px;
+      list-style-type: none;
+      li {
+        padding: 15px;
+        .fa-search{
+          font-size: 20px;
+          padding: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+        .shopping-cart {
+          a {
+            position: relative;
+            img {
+              width: 30px;
+            }
+            .counter {
+              position: absolute;
+              bottom: 0px;
+              right: -0px;
+              z-index: 1;
+              width: 18px;
+              height: 18px;
+              font-weight: bold;
+              line-height: 18px;
+              border-radius: 50%;
+              font-size: 11px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              border: 1px solid black;
+              background-color: #fff;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: black;
+          padding: 5px;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+  .navbar-menu-mobile.active {
+    margin-right: 0%;
+  }
+  .menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    border: 0;
+    font-size: 25px;
+    background-color: transparent;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  .close-menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 0;
+    font-size: 25px;
+    background-color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+  .desktop-menu {
+    display: none;
+  }
+}
+
+// -------------------- MEDIA --------------------
+
+@media (min-width: 320px) {
+  .NavbarItems {
+    .navbar-menu-mobile {
+      font-size: 0.8rem;
+    }
+    .close-menu-btn {
+      top: 20px;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .NavbarItems {
+    .navbar-menu-mobile{
+      width: 50%;
+      font-size: 0.9rem;
+    }
+  }
+  .user-widgets-wrapper {
+    flex-direction: column;
+  }
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .NavbarItems {
+    .menu-btn {
+      display: none;
+    }
+    .desktop-menu {
+      display: flex;
+      margin-right: 10px;
+      list-style-type: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      li {
+        padding: 5px 10px;
+        .fa-search{
+          font-size: 16px;
+          padding: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .shopping-cart {
+          a {
+            position: relative;
+            img {
+              width: 25px;
+            }
+            .counter {
+              position: absolute;
+              bottom: -4px;
+              right: -6px;
+              z-index: 1;
+              width: 18px;
+              height: 18px;
+              font-weight: bold;
+              line-height: 18px;
+              border-radius: 50%;
+              font-size: 11px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              border: 1px solid black;
+              background-color: #fff;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          color: #000;
+          transition: 0.3s;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .desktop-menu {
+    font-size: 1.1rem;
+  }
+}
+
+// /* Large devices (large desktops, 1200px and up) */
+// @media (min-width: 1200px) { ... }
+
+
+
+

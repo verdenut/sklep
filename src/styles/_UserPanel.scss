@@ -1,0 +1,35 @@
+.userPanel {
+	max-width: 1024px;
+	margin: 20px auto 20px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	justify-items: left;
+	min-height: 300px;
+	border: 1px solid rgb(200, 200, 200);
+	&--menu,
+	&--his {
+		margin: 0px 10px;
+	}
+	&--menu {
+		.btn {
+			margin-top: 10px;
+			border: none;
+			outline: none;
+			background-color: transparent;
+			border: 1px solid rgb(200, 200, 200);
+			padding: 5px;
+			transition: 0.3s;
+			&:hover {
+				background-color: #ffca7b;
+				cursor: pointer;
+			}
+		}
+	}
+	&--his {
+		display: none;
+	}
+	&--his.active {
+		display: block;
+		width: calc(100% - 20px);
+	}
+}

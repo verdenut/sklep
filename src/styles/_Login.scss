@@ -1,0 +1,73 @@
+.account {
+	max-width: 1024px;
+	margin: 30px auto 0px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-gap: 30px;
+	justify-items: center;
+	padding: 40px 10px;
+	background-color: #ffca7b;
+	.form-btn {
+		border: 1px solid rgb(200, 200, 200);
+		background-color: transparent;
+		outline: none;
+		padding: 5px;
+		font-size: 17px;
+		font-weight: 550;
+		transition: 0.3s;
+		&:hover {
+			cursor: pointer;
+			background-color: #ffca7b;
+		}
+		&:active {
+			outline: none;
+		}
+	}
+	.login--wrapper,
+	.register--wrapper {
+		box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+		padding: 30px;
+		background-color: #fff;
+		h1 {
+			font-weight: 450;
+		}
+		ul {
+			list-style: none;
+			li {
+				padding: 10px 0px;
+				input[type="text"],
+				input[type="password"],
+				input[type="email"] {
+					border: none;
+					border-bottom: 1px solid #ffca7b;
+					margin-left: 10px;
+					font-size: large;
+					&:focus {
+						outline: none;
+					}
+				}
+				input[type="checkbox"] {
+					margin-left: 0;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 320px) {
+	.account {
+		.login--wrapper,
+		.register--wrapper {
+			ul {
+				li {
+					input[type="text"],
+					input[type="password"],
+					input[type="email"] {
+						margin-left: 0px;
+					}
+				}
+			}
+		}
+	}
+}

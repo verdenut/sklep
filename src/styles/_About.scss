@@ -1,0 +1,21 @@
+.about {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0px 20px 0px 20px;
+
+  &--brand-logo {
+    margin-bottom: 20px;
+
+    &_link {
+      font-family: 'Piazzolla', serif;
+      letter-spacing: 2px;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+}
